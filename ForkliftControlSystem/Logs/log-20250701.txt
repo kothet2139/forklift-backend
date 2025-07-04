@@ -1,0 +1,332 @@
+[09:38:07 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[09:38:08 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[09:38:08 INF] HTTP GET /api/forklifts/all responded 200 in 422.1642 ms
+[09:38:08 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[09:38:08 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[09:38:08 INF] HTTP GET /api/forklifts/all responded 200 in 44.6734 ms
+[09:38:15 INF] HTTP Request: POST /api/commands/parse | Body: {"command":"F10R90L90B6","forkliftId":2}
+[09:38:15 INF] HTTP Response: 200 | Body: {"success":true,"data":["Move Forward by 10 metres","Turn Right by 90 degrees","Turn Left by 90 degrees","Move Backward by 6 metres"],"error":null}
+[09:38:15 INF] HTTP POST /api/commands/parse responded 200 in 49.7099 ms
+[09:38:22 INF] HTTP Request: POST /api/commands/parse | Body: {"command":"F10R80","forkliftId":2}
+[09:38:23 INF] HTTP Response: 400 | Body: {"success":false,"data":null,"error":{"message":"Invalid degree value after 'R': must be a multiple of 90"}}
+[09:38:23 INF] HTTP POST /api/commands/parse responded 400 in 74.6759 ms
+[09:38:38 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[09:38:38 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[09:38:38 INF] HTTP GET /api/forklifts/all responded 200 in 45.8161 ms
+[09:38:38 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[09:38:38 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[09:38:38 INF] HTTP GET /api/forklifts/all responded 200 in 28.7106 ms
+[09:38:43 INF] HTTP Request: POST /api/commands/track | Body: {"command":"F10R90F5L90B2L90","forkliftId":2}
+[09:38:43 INF] HTTP Response: 200 | Body: {"success":true,"data":{"actions":["Move Forward by 10 metres","Turn Right by 90 degrees","Move Forward by 5 metres","Turn Left by 90 degrees","Move Backward by 2 metres","Turn Left by 90 degrees"],"finalX":5,"finalY":8,"finalOrientation":"West"},"error":null}
+[09:38:43 INF] HTTP POST /api/commands/track responded 200 in 21.5660 ms
+[09:38:51 INF] HTTP Request: POST /api/commands/track | Body: {"command":"F10R90F5L90B2L80","forkliftId":2}
+[09:38:51 INF] HTTP Response: 400 | Body: {"success":false,"data":null,"error":{"message":"Invalid degree value after 'L': must be a multiple of 90"}}
+[09:38:51 INF] HTTP POST /api/commands/track responded 400 in 52.8233 ms
+[09:41:25 INF] HTTP Request: POST /api/commands/track | Body: {"command":"F10R90F5L90B2L80","forkliftId":2}
+[09:41:25 INF] HTTP Response: 400 | Body: {"success":false,"data":null,"error":{"message":"Invalid degree value after 'L': must be a multiple of 90"}}
+[09:41:25 INF] HTTP POST /api/commands/track responded 400 in 47.1450 ms
+[09:41:42 INF] HTTP Request: POST /api/commands/track | Body: {"command":"F10R90F5L90B2L80","forkliftId":2}
+[09:41:57 INF] HTTP Response: 400 | Body: {"success":false,"data":null,"error":{"message":"Invalid degree value after 'L': must be a multiple of 90"}}
+[09:42:00 INF] HTTP POST /api/commands/track responded 400 in 18060.6668 ms
+[09:42:59 INF] HTTP Request: POST /api/commands/track | Body: {"command":"F10R90F5L90B2L80","forkliftId":2}
+[09:43:01 INF] HTTP Response: 400 | Body: {"success":false,"data":null,"error":{"message":"Invalid degree value after 'L': must be a multiple of 90"}}
+[09:43:01 INF] HTTP POST /api/commands/track responded 400 in 2233.3628 ms
+[09:43:36 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[09:43:36 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[09:43:36 INF] HTTP GET /api/forklifts/all responded 200 in 100.0763 ms
+[09:43:36 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[09:43:36 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[09:43:36 INF] HTTP GET /api/forklifts/all responded 200 in 37.3605 ms
+[09:43:41 INF] HTTP Request: POST /api/commands/parse | Body: {"command":"F10R80","forkliftId":3}
+[09:43:47 INF] HTTP Response: 400 | Body: {"success":false,"data":null,"error":{"message":"Invalid degree value after 'R': must be a multiple of 90"}}
+[09:43:47 INF] HTTP POST /api/commands/parse responded 400 in 5687.8542 ms
+[09:45:40 INF] HTTP Request: POST /api/commands/parse | Body: {"command":"F10R80","forkliftId":3}
+[09:45:43 INF] HTTP Response: 400 | Body: {"success":false,"data":null,"error":{"message":"Invalid degree value after 'R': must be a multiple of 90"}}
+[09:45:43 INF] HTTP POST /api/commands/parse responded 400 in 2289.4879 ms
+[09:45:46 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[09:45:46 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[09:45:46 INF] HTTP GET /api/forklifts/all responded 200 in 46.3105 ms
+[09:45:46 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[09:45:46 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[09:45:46 INF] HTTP GET /api/forklifts/all responded 200 in 44.9865 ms
+[09:45:53 INF] HTTP Request: POST /api/commands/track | Body: {"command":"F10R90F5L90B2L80","forkliftId":2}
+[09:45:55 INF] HTTP Response: 400 | Body: {"success":false,"data":null,"error":{"message":"Invalid degree value after 'L': must be a multiple of 90"}}
+[09:45:55 INF] HTTP POST /api/commands/track responded 400 in 1992.5116 ms
+[09:46:06 INF] HTTP Request: POST /api/commands/track | Body: {"command":"F10R90F5L90B2L90","forkliftId":2}
+[09:46:06 INF] HTTP Response: 200 | Body: {"success":true,"data":{"actions":["Move Forward by 10 metres","Turn Right by 90 degrees","Move Forward by 5 metres","Turn Left by 90 degrees","Move Backward by 2 metres","Turn Left by 90 degrees"],"finalX":5,"finalY":8,"finalOrientation":"West"},"error":null}
+[09:46:06 INF] HTTP POST /api/commands/track responded 200 in 17.7675 ms
+[09:47:57 INF] HTTP Request: GET /api/forklifts | Body: 
+[09:47:57 INF] HTTP Response: 200 | Body: {"success":true,"data":{"items":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"totalCount":5,"page":1,"pageSize":5,"totalPages":1},"error":null}
+[09:47:57 INF] HTTP GET /api/forklifts responded 200 in 108.9495 ms
+[09:47:57 INF] HTTP Request: GET /api/forklifts | Body: 
+[09:47:57 INF] HTTP Response: 200 | Body: {"success":true,"data":{"items":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"totalCount":5,"page":1,"pageSize":5,"totalPages":1},"error":null}
+[09:47:57 INF] HTTP GET /api/forklifts responded 200 in 24.0776 ms
+[09:49:54 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[09:49:54 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[09:49:54 INF] HTTP GET /api/forklifts/all responded 200 in 58.0050 ms
+[09:49:55 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[09:49:55 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[09:49:55 INF] HTTP GET /api/forklifts/all responded 200 in 44.3318 ms
+[09:49:56 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[09:49:56 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[09:49:56 INF] HTTP GET /api/forklifts/all responded 200 in 36.0444 ms
+[09:49:56 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[09:49:56 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[09:49:56 INF] HTTP GET /api/forklifts/all responded 200 in 32.9723 ms
+[09:49:57 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[09:49:57 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[09:49:57 INF] HTTP GET /api/forklifts/all responded 200 in 29.7165 ms
+[09:49:57 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[09:49:57 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[09:49:57 INF] HTTP GET /api/forklifts/all responded 200 in 27.1037 ms
+[09:49:58 INF] HTTP Request: GET /api/forklifts | Body: 
+[09:49:58 INF] HTTP Response: 200 | Body: {"success":true,"data":{"items":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"totalCount":5,"page":1,"pageSize":5,"totalPages":1},"error":null}
+[09:49:58 INF] HTTP GET /api/forklifts responded 200 in 28.3957 ms
+[09:49:58 INF] HTTP Request: GET /api/forklifts | Body: 
+[09:49:58 INF] HTTP Response: 200 | Body: {"success":true,"data":{"items":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"totalCount":5,"page":1,"pageSize":5,"totalPages":1},"error":null}
+[09:49:58 INF] HTTP GET /api/forklifts responded 200 in 27.4271 ms
+[10:08:13 INF] HTTP Request: POST /api/Commands/trackwithobstacles | Body: {
+  "command": "string",
+  "obstacles": [
+    {
+      "x": 0,
+      "y": 0
+    }
+  ]
+}
+[10:08:13 INF] HTTP Response: 400 | Body: {"success":false,"data":null,"error":{"message":"Invalid number after 's'"}}
+[10:08:13 INF] HTTP POST /api/Commands/trackwithobstacles responded 400 in 39.0360 ms
+[10:08:54 INF] HTTP Request: POST /api/commands/trackwithobstacles | Body: {"command":"F3R90","obstacles":[{"x":3,"y":1}]}
+[10:08:54 INF] HTTP Response: 200 | Body: {"success":true,"data":{"actions":["Move Forward by 3 metres","Turn Right by 90 degrees"],"finalX":0,"finalY":3,"finalOrientation":"East"},"error":null}
+[10:08:54 INF] HTTP POST /api/commands/trackwithobstacles responded 200 in 16.5004 ms
+[10:09:24 INF] HTTP Request: POST /api/commands/trackwithobstacles | Body: {"command":"F3R90B1","obstacles":[{"x":3,"y":1}]}
+[10:09:24 INF] HTTP Response: 200 | Body: {"success":true,"data":{"actions":["Move Forward by 3 metres","Turn Right by 90 degrees","Move Backward by 1 metres"],"finalX":-1,"finalY":3,"finalOrientation":"East"},"error":null}
+[10:09:24 INF] HTTP POST /api/commands/trackwithobstacles responded 200 in 18.8967 ms
+[10:14:37 INF] HTTP Request: POST /api/commands/trackwithobstacles | Body: {"command":"F3R90F2L90F2","obstacles":[]}
+[10:14:37 INF] HTTP Response: 200 | Body: {"success":true,"data":{"actions":["Move Forward by 3 metres","Turn Right by 90 degrees","Move Forward by 2 metres","Turn Left by 90 degrees","Move Forward by 2 metres"],"finalX":2,"finalY":5,"finalOrientation":"North"},"error":null}
+[10:14:37 INF] HTTP POST /api/commands/trackwithobstacles responded 200 in 13.5126 ms
+[10:14:51 INF] HTTP Request: POST /api/commands/trackwithobstacles | Body: {"command":"F3R90F2L90F2","obstacles":[{"x":2,"y":5}]}
+[10:14:51 INF] HTTP Response: 200 | Body: {"success":true,"data":{"actions":["Move Forward by 3 metres","Turn Right by 90 degrees","Move Forward by 2 metres","Turn Left by 90 degrees","Move Forward by 2 metres","Obstacle encountered at (2, 5). Movement stopped."],"finalX":2,"finalY":4,"finalOrientation":"North"},"error":null}
+[10:14:51 INF] HTTP POST /api/commands/trackwithobstacles responded 200 in 9.2538 ms
+[10:18:16 INF] HTTP Request: POST /api/commands/trackwithobstacles | Body: {"command":"F3R90F2L90F2","obstacles":[{"x":3,"y":1}]}
+[10:18:16 INF] HTTP Response: 200 | Body: {"success":true,"data":{"actions":["Move Forward by 3 metres","Turn Right by 90 degrees","Move Forward by 2 metres","Turn Left by 90 degrees","Move Forward by 2 metres"],"finalX":2,"finalY":5,"finalOrientation":"North"},"error":null}
+[10:18:16 INF] HTTP POST /api/commands/trackwithobstacles responded 200 in 12.9329 ms
+[10:24:29 INF] HTTP Request: POST /api/commands/trackwithobstacles | Body: {"command":"F3R90F2L90F2","obstacles":[{"x":2,"y":5}]}
+[10:24:29 INF] HTTP Response: 200 | Body: {"success":true,"data":{"actions":["Move Forward by 3 metres","Turn Right by 90 degrees","Move Forward by 2 metres","Turn Left by 90 degrees","Move Forward by 2 metres","Obstacle encountered at (2, 5). Movement stopped."],"finalX":2,"finalY":4,"finalOrientation":"North"},"error":null}
+[10:24:29 INF] HTTP POST /api/commands/trackwithobstacles responded 200 in 12.0560 ms
+[11:01:26 INF] HTTP Request: GET /api/forklifts | Body: 
+[11:01:26 INF] HTTP Response: 200 | Body: {"success":true,"data":{"items":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"totalCount":5,"page":1,"pageSize":5,"totalPages":1},"error":null}
+[11:01:26 INF] HTTP GET /api/forklifts responded 200 in 93.6995 ms
+[11:01:26 INF] HTTP Request: GET /api/forklifts | Body: 
+[11:01:26 INF] HTTP Response: 200 | Body: {"success":true,"data":{"items":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"totalCount":5,"page":1,"pageSize":5,"totalPages":1},"error":null}
+[11:01:26 INF] HTTP GET /api/forklifts responded 200 in 16.8715 ms
+[11:01:27 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[11:01:27 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[11:01:27 INF] HTTP GET /api/forklifts/all responded 200 in 28.6997 ms
+[11:01:27 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[11:01:27 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[11:01:27 INF] HTTP GET /api/forklifts/all responded 200 in 18.8733 ms
+[11:01:29 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[11:01:29 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[11:01:29 INF] HTTP GET /api/forklifts/all responded 200 in 22.6974 ms
+[11:01:29 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[11:01:29 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[11:01:29 INF] HTTP GET /api/forklifts/all responded 200 in 18.2324 ms
+[11:01:31 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[11:01:31 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[11:01:31 INF] HTTP GET /api/forklifts/all responded 200 in 25.4623 ms
+[11:01:31 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[11:01:31 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[11:01:31 INF] HTTP GET /api/forklifts/all responded 200 in 18.3761 ms
+[11:01:32 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[11:01:32 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[11:01:32 INF] HTTP GET /api/forklifts/all responded 200 in 22.9757 ms
+[11:01:32 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[11:01:32 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[11:01:32 INF] HTTP GET /api/forklifts/all responded 200 in 19.3581 ms
+[11:01:33 INF] HTTP Request: GET /api/forklifts | Body: 
+[11:01:33 INF] HTTP Response: 200 | Body: {"success":true,"data":{"items":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"totalCount":5,"page":1,"pageSize":5,"totalPages":1},"error":null}
+[11:01:33 INF] HTTP GET /api/forklifts responded 200 in 19.6332 ms
+[11:01:33 INF] HTTP Request: GET /api/forklifts | Body: 
+[11:01:33 INF] HTTP Response: 200 | Body: {"success":true,"data":{"items":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"totalCount":5,"page":1,"pageSize":5,"totalPages":1},"error":null}
+[11:01:33 INF] HTTP GET /api/forklifts responded 200 in 20.4772 ms
+[11:02:04 INF] HTTP Request: GET /api/forklifts | Body: 
+[11:02:04 INF] HTTP Response: 200 | Body: {"success":true,"data":{"items":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"totalCount":5,"page":1,"pageSize":5,"totalPages":1},"error":null}
+[11:02:04 INF] HTTP GET /api/forklifts responded 200 in 38.2187 ms
+[11:02:04 INF] HTTP Request: GET /api/forklifts | Body: 
+[11:02:04 INF] HTTP Response: 200 | Body: {"success":true,"data":{"items":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"totalCount":5,"page":1,"pageSize":5,"totalPages":1},"error":null}
+[11:02:04 INF] HTTP GET /api/forklifts responded 200 in 22.0971 ms
+[11:02:41 INF] HTTP Request: GET /api/forklifts | Body: 
+[11:02:41 INF] HTTP Response: 400 | Body: {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred.","status":400,"errors":{"pageSize":["The value 'undefined' is not valid."]},"traceId":"00-0c5cd6739458700abf3764fd66d083a1-85678ab46d85b307-00"}
+[11:02:41 INF] HTTP GET /api/forklifts responded 400 in 65.5364 ms
+[11:02:41 INF] HTTP Request: GET /api/forklifts | Body: 
+[11:02:41 INF] HTTP Response: 400 | Body: {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred.","status":400,"errors":{"pageSize":["The value 'undefined' is not valid."]},"traceId":"00-0ec4aa4ccdc3d0d52241849a5864aec8-58c4fc5cf8dfe984-00"}
+[11:02:41 INF] HTTP GET /api/forklifts responded 400 in 1.3898 ms
+[11:02:44 INF] HTTP Request: GET /api/forklifts | Body: 
+[11:02:44 INF] HTTP Response: 400 | Body: {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred.","status":400,"errors":{"pageSize":["The value 'undefined' is not valid."]},"traceId":"00-fd4a9a9e16ed23eabb0fc1ed6c4dcccd-ea9d5872376c2239-00"}
+[11:02:44 INF] HTTP GET /api/forklifts responded 400 in 1.9372 ms
+[11:02:44 INF] HTTP Request: GET /api/forklifts | Body: 
+[11:02:44 INF] HTTP Response: 400 | Body: {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred.","status":400,"errors":{"pageSize":["The value 'undefined' is not valid."]},"traceId":"00-9da322267b029b67cd0c8805783a8753-25f8ff4625030883-00"}
+[11:02:44 INF] HTTP GET /api/forklifts responded 400 in 2.1705 ms
+[11:02:45 INF] HTTP Request: GET /api/forklifts | Body: 
+[11:02:45 INF] HTTP Response: 400 | Body: {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred.","status":400,"errors":{"pageSize":["The value 'undefined' is not valid."]},"traceId":"00-e2722ae6e270d104034130a0a1812032-efc80b698cebc906-00"}
+[11:02:45 INF] HTTP GET /api/forklifts responded 400 in 2.6530 ms
+[11:02:45 INF] HTTP Request: GET /api/forklifts | Body: 
+[11:02:45 INF] HTTP Response: 400 | Body: {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred.","status":400,"errors":{"pageSize":["The value 'undefined' is not valid."]},"traceId":"00-8fc12192fdde2fa60069be6fe3b21946-e5dc22613de37bf1-00"}
+[11:02:45 INF] HTTP GET /api/forklifts responded 400 in 1.5924 ms
+[11:02:46 INF] HTTP Request: GET /api/forklifts | Body: 
+[11:02:46 INF] HTTP Response: 400 | Body: {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred.","status":400,"errors":{"pageSize":["The value 'undefined' is not valid."]},"traceId":"00-512a6a2c49a8d0d85840318e1e3ea989-13c417f9e377fdb2-00"}
+[11:02:46 INF] HTTP GET /api/forklifts responded 400 in 3.3146 ms
+[11:02:46 INF] HTTP Request: GET /api/forklifts | Body: 
+[11:02:46 INF] HTTP Response: 400 | Body: {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred.","status":400,"errors":{"pageSize":["The value 'undefined' is not valid."]},"traceId":"00-dd131b4b59ebbb858fac3e25f6d46e26-af562672baf2aa69-00"}
+[11:02:46 INF] HTTP GET /api/forklifts responded 400 in 1.8379 ms
+[11:02:46 INF] HTTP Request: GET /api/forklifts | Body: 
+[11:02:46 INF] HTTP Response: 400 | Body: {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred.","status":400,"errors":{"pageSize":["The value 'undefined' is not valid."]},"traceId":"00-6a828f056b0b54220074a8557243ea9b-6bb57b6c0e50222c-00"}
+[11:02:46 INF] HTTP GET /api/forklifts responded 400 in 2.7782 ms
+[11:02:46 INF] HTTP Request: GET /api/forklifts | Body: 
+[11:02:46 INF] HTTP Response: 400 | Body: {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred.","status":400,"errors":{"pageSize":["The value 'undefined' is not valid."]},"traceId":"00-db77e1e0469e5ed1c5905886391adda1-36b440421e241812-00"}
+[11:02:46 INF] HTTP GET /api/forklifts responded 400 in 1.4543 ms
+[11:02:46 INF] HTTP Request: GET /api/forklifts | Body: 
+[11:02:46 INF] HTTP Response: 400 | Body: {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred.","status":400,"errors":{"pageSize":["The value 'undefined' is not valid."]},"traceId":"00-e294be368c5c165c11181747f66ae1f6-758457f3cda278b8-00"}
+[11:02:46 INF] HTTP GET /api/forklifts responded 400 in 1.8679 ms
+[11:02:46 INF] HTTP Request: GET /api/forklifts | Body: 
+[11:02:46 INF] HTTP Response: 400 | Body: {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred.","status":400,"errors":{"pageSize":["The value 'undefined' is not valid."]},"traceId":"00-e59e2b901a28048d5bd6f2638e51abdf-28e715298e6ad0c7-00"}
+[11:02:46 INF] HTTP GET /api/forklifts responded 400 in 1.6412 ms
+[11:02:47 INF] HTTP Request: GET /api/forklifts | Body: 
+[11:02:47 INF] HTTP Response: 400 | Body: {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred.","status":400,"errors":{"pageSize":["The value 'undefined' is not valid."]},"traceId":"00-bfd72b31eba7c0472e52184ee7b5743e-a6d906230ecc4182-00"}
+[11:02:47 INF] HTTP GET /api/forklifts responded 400 in 1.6922 ms
+[11:02:47 INF] HTTP Request: GET /api/forklifts | Body: 
+[11:02:47 INF] HTTP Response: 400 | Body: {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred.","status":400,"errors":{"pageSize":["The value 'undefined' is not valid."]},"traceId":"00-d76211e5c01267573d4582a606dd2694-d3e729fbe8f78816-00"}
+[11:02:47 INF] HTTP GET /api/forklifts responded 400 in 1.2803 ms
+[11:03:02 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[11:03:02 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[11:03:02 INF] HTTP GET /api/forklifts/all responded 200 in 31.2962 ms
+[11:03:02 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[11:03:02 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[11:03:02 INF] HTTP GET /api/forklifts/all responded 200 in 28.8770 ms
+[11:03:06 INF] HTTP Request: GET /api/forklifts | Body: 
+[11:03:06 INF] HTTP Response: 400 | Body: {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred.","status":400,"errors":{"pageSize":["The value 'undefined' is not valid."]},"traceId":"00-04b19ad7c97f31e7096eefb7745c5507-3ddaa966388c8876-00"}
+[11:03:06 INF] HTTP GET /api/forklifts responded 400 in 1.5973 ms
+[11:03:06 INF] HTTP Request: GET /api/forklifts | Body: 
+[11:03:06 INF] HTTP Response: 400 | Body: {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred.","status":400,"errors":{"pageSize":["The value 'undefined' is not valid."]},"traceId":"00-870ec3e280cb11587d225b329523d174-49a83d4ec425d478-00"}
+[11:03:06 INF] HTTP GET /api/forklifts responded 400 in 1.1337 ms
+[11:03:57 INF] HTTP Request: GET /api/forklifts | Body: 
+[11:03:57 INF] HTTP Response: 200 | Body: {"success":true,"data":{"items":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6}],"totalCount":5,"page":1,"pageSize":2,"totalPages":3},"error":null}
+[11:03:57 INF] HTTP GET /api/forklifts responded 200 in 73.4883 ms
+[11:03:57 INF] HTTP Request: GET /api/forklifts | Body: 
+[11:03:57 INF] HTTP Response: 200 | Body: {"success":true,"data":{"items":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6}],"totalCount":5,"page":1,"pageSize":2,"totalPages":3},"error":null}
+[11:03:57 INF] HTTP GET /api/forklifts responded 200 in 79.9852 ms
+[11:04:01 INF] HTTP Request: GET /api/forklifts | Body: 
+[11:04:01 INF] HTTP Response: 200 | Body: {"success":true,"data":{"items":[{"id":1,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":2,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5}],"totalCount":5,"page":2,"pageSize":2,"totalPages":3},"error":null}
+[11:04:01 INF] HTTP GET /api/forklifts responded 200 in 14.8450 ms
+[11:04:03 INF] HTTP Request: GET /api/forklifts | Body: 
+[11:04:03 INF] HTTP Response: 200 | Body: {"success":true,"data":{"items":[{"id":1,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"totalCount":5,"page":3,"pageSize":2,"totalPages":3},"error":null}
+[11:04:03 INF] HTTP GET /api/forklifts responded 200 in 13.7444 ms
+[11:04:04 INF] HTTP Request: GET /api/forklifts | Body: 
+[11:04:04 INF] HTTP Response: 200 | Body: {"success":true,"data":{"items":[{"id":1,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":2,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5}],"totalCount":5,"page":2,"pageSize":2,"totalPages":3},"error":null}
+[11:04:04 INF] HTTP GET /api/forklifts responded 200 in 15.0819 ms
+[11:04:05 INF] HTTP Request: GET /api/forklifts | Body: 
+[11:04:05 INF] HTTP Response: 200 | Body: {"success":true,"data":{"items":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6}],"totalCount":5,"page":1,"pageSize":2,"totalPages":3},"error":null}
+[11:04:05 INF] HTTP GET /api/forklifts responded 200 in 12.9296 ms
+[11:04:06 INF] HTTP Request: GET /api/forklifts | Body: 
+[11:04:06 INF] HTTP Response: 200 | Body: {"success":true,"data":{"items":[{"id":1,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":2,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5}],"totalCount":5,"page":2,"pageSize":2,"totalPages":3},"error":null}
+[11:04:06 INF] HTTP GET /api/forklifts responded 200 in 14.3529 ms
+[11:04:07 INF] HTTP Request: GET /api/forklifts | Body: 
+[11:04:07 INF] HTTP Response: 200 | Body: {"success":true,"data":{"items":[{"id":1,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"totalCount":5,"page":3,"pageSize":2,"totalPages":3},"error":null}
+[11:04:07 INF] HTTP GET /api/forklifts responded 200 in 19.9121 ms
+[11:12:34 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[11:12:34 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[11:12:34 INF] HTTP GET /api/forklifts/all responded 200 in 51.2963 ms
+[11:12:34 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[11:12:34 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[11:12:34 INF] HTTP GET /api/forklifts/all responded 200 in 23.7498 ms
+[11:12:35 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[11:12:35 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[11:12:35 INF] HTTP GET /api/forklifts/all responded 200 in 26.4434 ms
+[11:12:35 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[11:12:35 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[11:12:35 INF] HTTP GET /api/forklifts/all responded 200 in 16.8860 ms
+[14:01:38 INF] HTTP Request: GET /api/forklifts | Body: 
+[14:01:38 INF] HTTP Response: 200 | Body: {"success":true,"data":{"items":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6}],"totalCount":5,"page":1,"pageSize":2,"totalPages":3},"error":null}
+[14:01:38 INF] HTTP GET /api/forklifts responded 200 in 43.6187 ms
+[14:01:38 INF] HTTP Request: GET /api/forklifts | Body: 
+[14:01:38 INF] HTTP Response: 200 | Body: {"success":true,"data":{"items":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6}],"totalCount":5,"page":1,"pageSize":2,"totalPages":3},"error":null}
+[14:01:38 INF] HTTP GET /api/forklifts responded 200 in 28.0773 ms
+[14:01:41 INF] HTTP Request: GET /api/forklifts | Body: 
+[14:01:41 INF] HTTP Response: 200 | Body: {"success":true,"data":{"items":[{"id":1,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":2,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5}],"totalCount":5,"page":2,"pageSize":2,"totalPages":3},"error":null}
+[14:01:41 INF] HTTP GET /api/forklifts responded 200 in 18.3564 ms
+[14:01:42 INF] HTTP Request: GET /api/forklifts | Body: 
+[14:01:42 INF] HTTP Response: 200 | Body: {"success":true,"data":{"items":[{"id":1,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"totalCount":5,"page":3,"pageSize":2,"totalPages":3},"error":null}
+[14:01:42 INF] HTTP GET /api/forklifts responded 200 in 16.1524 ms
+[14:01:44 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[14:01:44 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[14:01:44 INF] HTTP GET /api/forklifts/all responded 200 in 22.5772 ms
+[14:01:44 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[14:01:44 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[14:01:44 INF] HTTP GET /api/forklifts/all responded 200 in 19.1505 ms
+[14:01:46 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[14:01:46 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[14:01:46 INF] HTTP GET /api/forklifts/all responded 200 in 18.6622 ms
+[14:01:46 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[14:01:46 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[14:01:46 INF] HTTP GET /api/forklifts/all responded 200 in 20.7506 ms
+[14:01:48 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[14:01:48 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[14:01:48 INF] HTTP GET /api/forklifts/all responded 200 in 18.4118 ms
+[14:01:48 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[14:01:48 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[14:01:48 INF] HTTP GET /api/forklifts/all responded 200 in 26.2017 ms
+[14:01:49 INF] HTTP Request: GET /api/forklifts | Body: 
+[14:01:49 INF] HTTP Response: 200 | Body: {"success":true,"data":{"items":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6}],"totalCount":5,"page":1,"pageSize":2,"totalPages":3},"error":null}
+[14:01:49 INF] HTTP GET /api/forklifts responded 200 in 18.8723 ms
+[14:01:49 INF] HTTP Request: GET /api/forklifts | Body: 
+[14:01:49 INF] HTTP Response: 200 | Body: {"success":true,"data":{"items":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6}],"totalCount":5,"page":1,"pageSize":2,"totalPages":3},"error":null}
+[14:01:49 INF] HTTP GET /api/forklifts responded 200 in 18.6561 ms
+[14:22:05 INF] HTTP Request: GET /api/forklifts | Body: 
+[14:22:05 INF] HTTP Response: 200 | Body: {"success":true,"data":{"items":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6}],"totalCount":5,"page":1,"pageSize":2,"totalPages":3},"error":null}
+[14:22:05 INF] HTTP GET /api/forklifts responded 200 in 36.3123 ms
+[14:22:05 INF] HTTP Request: GET /api/forklifts | Body: 
+[14:22:05 INF] HTTP Response: 200 | Body: {"success":true,"data":{"items":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6}],"totalCount":5,"page":1,"pageSize":2,"totalPages":3},"error":null}
+[14:22:05 INF] HTTP GET /api/forklifts responded 200 in 18.8333 ms
+[14:22:06 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[14:22:06 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[14:22:06 INF] HTTP GET /api/forklifts/all responded 200 in 18.1807 ms
+[14:22:06 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[14:22:06 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[14:22:06 INF] HTTP GET /api/forklifts/all responded 200 in 18.3681 ms
+[14:22:07 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[14:22:07 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[14:22:07 INF] HTTP GET /api/forklifts/all responded 200 in 18.9700 ms
+[14:22:07 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[14:22:07 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[14:22:07 INF] HTTP GET /api/forklifts/all responded 200 in 19.9071 ms
+[14:22:08 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[14:22:08 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[14:22:08 INF] HTTP GET /api/forklifts/all responded 200 in 18.0370 ms
+[14:22:08 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[14:22:08 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[14:22:08 INF] HTTP GET /api/forklifts/all responded 200 in 16.4538 ms
+[14:22:10 INF] HTTP Request: GET /api/forklifts | Body: 
+[14:22:10 INF] HTTP Response: 200 | Body: {"success":true,"data":{"items":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6}],"totalCount":5,"page":1,"pageSize":2,"totalPages":3},"error":null}
+[14:22:10 INF] HTTP GET /api/forklifts responded 200 in 19.6994 ms
+[14:22:10 INF] HTTP Request: GET /api/forklifts | Body: 
+[14:22:10 INF] HTTP Response: 200 | Body: {"success":true,"data":{"items":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6}],"totalCount":5,"page":1,"pageSize":2,"totalPages":3},"error":null}
+[14:22:10 INF] HTTP GET /api/forklifts responded 200 in 17.7123 ms
+[14:22:12 INF] HTTP Request: GET /api/forklifts | Body: 
+[14:22:12 INF] HTTP Response: 200 | Body: {"success":true,"data":{"items":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6}],"totalCount":5,"page":1,"pageSize":2,"totalPages":3},"error":null}
+[14:22:12 INF] HTTP GET /api/forklifts responded 200 in 19.8744 ms
+[14:22:12 INF] HTTP Request: GET /api/forklifts | Body: 
+[14:22:12 INF] HTTP Response: 200 | Body: {"success":true,"data":{"items":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6}],"totalCount":5,"page":1,"pageSize":2,"totalPages":3},"error":null}
+[14:22:12 INF] HTTP GET /api/forklifts responded 200 in 14.9002 ms
+[14:22:18 INF] HTTP Request: GET /api/forklifts | Body: 
+[14:22:18 INF] HTTP Response: 200 | Body: {"success":true,"data":{"items":[{"id":1,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":2,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5}],"totalCount":5,"page":2,"pageSize":2,"totalPages":3},"error":null}
+[14:22:18 INF] HTTP GET /api/forklifts responded 200 in 12.8661 ms
+[14:22:21 INF] HTTP Request: GET /api/forklifts | Body: 
+[14:22:21 INF] HTTP Response: 200 | Body: {"success":true,"data":{"items":[{"id":1,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"totalCount":5,"page":3,"pageSize":2,"totalPages":3},"error":null}
+[14:22:21 INF] HTTP GET /api/forklifts responded 200 in 13.5686 ms
+[14:22:23 INF] HTTP Request: GET /api/forklifts | Body: 
+[14:22:23 INF] HTTP Response: 200 | Body: {"success":true,"data":{"items":[{"id":1,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":2,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5}],"totalCount":5,"page":2,"pageSize":2,"totalPages":3},"error":null}
+[14:22:23 INF] HTTP GET /api/forklifts responded 200 in 11.5242 ms
+[14:22:26 INF] HTTP Request: GET /api/forklifts | Body: 
+[14:22:26 INF] HTTP Response: 200 | Body: {"success":true,"data":{"items":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6}],"totalCount":5,"page":1,"pageSize":2,"totalPages":3},"error":null}
+[14:22:26 INF] HTTP GET /api/forklifts responded 200 in 14.5038 ms

@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Titan Lifter",
+    "modelNumber": "XA123",
+    "manufacturingDate": "2015-05-12"
+  },
+  {
+    "name": "Zephyr Mover",
+    "modelNumber": "YB456",
+    "manufacturingDate": "2018-07-23"
+  },
+  {
+    "name": "Atlas Hauler",
+    "modelNumber": "ZC789",
+    "manufacturingDate": "2012-10-10"
+  },
+  {
+    "name": "Cyclone Loader",
+    "modelNumber": "WD321",
+    "manufacturingDate": "2020-01-15"
+  },
+  {
+    "name": "Phoenix Shifter",
+    "modelNumber": "VE654",
+    "manufacturingDate": "2017-03-30"
+  }
+]

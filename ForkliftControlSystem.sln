@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35828.75
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForkliftControlSystem", "ForkliftControlSystem\ForkliftControlSystem.csproj", "{CF95923D-7344-4AEC-A8D2-31695BADC1A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForkliftControl.Tests", "ForkliftControl.Tests\ForkliftControl.Tests.csproj", "{AAF0A206-7912-AE23-CF16-A17966ABA267}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF95923D-7344-4AEC-A8D2-31695BADC1A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF95923D-7344-4AEC-A8D2-31695BADC1A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF95923D-7344-4AEC-A8D2-31695BADC1A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF95923D-7344-4AEC-A8D2-31695BADC1A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAF0A206-7912-AE23-CF16-A17966ABA267}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAF0A206-7912-AE23-CF16-A17966ABA267}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAF0A206-7912-AE23-CF16-A17966ABA267}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAF0A206-7912-AE23-CF16-A17966ABA267}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {71D2D8FD-CA2E-48A5-AF15-7F601B3CD19D}
+	EndGlobalSection
+EndGlobal

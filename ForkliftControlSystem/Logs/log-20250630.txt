@@ -1,0 +1,151 @@
+[16:21:24 ERR] Unhandled exception occurred
+ForkliftControlSystem.Domain.Exceptions.BadRequestException: Invalid number after 's'
+   at ForkliftControlSystem.Infrastructure.Services.CommandService.ParseCommandInternal(String command) in D:\Draycir\Project\ForkliftControlSystem\Backend\ForkliftControlSystem\ForkliftControlSystem\Infrastructure\Services\CommandService.cs:line 28
+   at ForkliftControlSystem.Infrastructure.Services.CommandService.ExecuteCommand(String command) in D:\Draycir\Project\ForkliftControlSystem\Backend\ForkliftControlSystem\ForkliftControlSystem\Infrastructure\Services\CommandService.cs:line 64
+   at ForkliftControlSystem.Presentation.Controllers.CommandsController.TrackCommand(CommandRequest request) in D:\Draycir\Project\ForkliftControlSystem\Backend\ForkliftControlSystem\ForkliftControlSystem\Presentation\Controllers\CommandController.cs:line 21
+   at lambda_method11(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at ForkliftControlSystem.Api.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in D:\Draycir\Project\ForkliftControlSystem\Backend\ForkliftControlSystem\ForkliftControlSystem\Presentation\Middleware\ExceptionHandlingMiddleware.cs:line 23
+[16:21:24 ERR] ❌ Unhandled exception: Invalid number after 's'
+ForkliftControlSystem.Domain.Exceptions.BadRequestException: Invalid number after 's'
+   at ForkliftControlSystem.Infrastructure.Services.CommandService.ParseCommandInternal(String command) in D:\Draycir\Project\ForkliftControlSystem\Backend\ForkliftControlSystem\ForkliftControlSystem\Infrastructure\Services\CommandService.cs:line 28
+   at ForkliftControlSystem.Infrastructure.Services.CommandService.ExecuteCommand(String command) in D:\Draycir\Project\ForkliftControlSystem\Backend\ForkliftControlSystem\ForkliftControlSystem\Infrastructure\Services\CommandService.cs:line 64
+   at ForkliftControlSystem.Presentation.Controllers.CommandsController.TrackCommand(CommandRequest request) in D:\Draycir\Project\ForkliftControlSystem\Backend\ForkliftControlSystem\ForkliftControlSystem\Presentation\Controllers\CommandController.cs:line 21
+   at lambda_method11(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at ForkliftControlSystem.Api.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in D:\Draycir\Project\ForkliftControlSystem\Backend\ForkliftControlSystem\ForkliftControlSystem\Presentation\Middleware\ExceptionHandlingMiddleware.cs:line 23
+[16:27:17 INF] HTTP Request: GET /api/Forklifts/all | Body: 
+[16:27:17 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[16:27:17 INF] HTTP GET /api/Forklifts/all responded 200 in 278.0335 ms
+[16:28:49 INF] HTTP Request: POST /api/commands/parse | Body: {"command":"F10R90L90B5","forkliftId":3}
+[16:28:49 INF] HTTP Response: 200 | Body: {"success":true,"data":["Move Forward by 10 metres","Turn Right by 90 degrees","Turn Left by 90 degrees","Move Backward by 5 metres"],"error":null}
+[16:28:49 INF] HTTP POST /api/commands/parse responded 200 in 41.4889 ms
+[16:28:51 INF] HTTP Request: POST /api/commands/parse | Body: {"command":"F10R90L90B5","forkliftId":3}
+[16:28:51 INF] HTTP Response: 200 | Body: {"success":true,"data":["Move Forward by 10 metres","Turn Right by 90 degrees","Turn Left by 90 degrees","Move Backward by 5 metres"],"error":null}
+[16:28:51 INF] HTTP POST /api/commands/parse responded 200 in 18.4537 ms
+[16:33:41 INF] HTTP Request: POST /api/commands/parse | Body: {"command":"F10R90L90B5","forkliftId":3}
+[16:33:41 INF] HTTP Response: 200 | Body: {"success":true,"data":["Move Forward by 10 metres","Turn Right by 90 degrees","Turn Left by 90 degrees","Move Backward by 5 metres"],"error":null}
+[16:33:41 INF] HTTP POST /api/commands/parse responded 200 in 16.0439 ms
+[16:33:42 INF] HTTP Request: POST /api/commands/parse | Body: {"command":"F10R90L90B5","forkliftId":3}
+[16:33:42 INF] HTTP Response: 200 | Body: {"success":true,"data":["Move Forward by 10 metres","Turn Right by 90 degrees","Turn Left by 90 degrees","Move Backward by 5 metres"],"error":null}
+[16:33:42 INF] HTTP POST /api/commands/parse responded 200 in 15.3719 ms
+[16:33:46 INF] HTTP Request: POST /api/commands/parse | Body: {"command":"F10R90L90B6","forkliftId":3}
+[16:33:46 INF] HTTP Response: 200 | Body: {"success":true,"data":["Move Forward by 10 metres","Turn Right by 90 degrees","Turn Left by 90 degrees","Move Backward by 6 metres"],"error":null}
+[16:33:46 INF] HTTP POST /api/commands/parse responded 200 in 16.1590 ms
+[16:33:47 INF] HTTP Request: POST /api/commands/parse | Body: {"command":"F10R90L90B6","forkliftId":3}
+[16:33:47 INF] HTTP Response: 200 | Body: {"success":true,"data":["Move Forward by 10 metres","Turn Right by 90 degrees","Turn Left by 90 degrees","Move Backward by 6 metres"],"error":null}
+[16:33:47 INF] HTTP POST /api/commands/parse responded 200 in 20.5862 ms
+[16:34:03 INF] HTTP Request: POST /api/commands/parse | Body: {"command":"F10R90L90B6","forkliftId":1}
+[16:34:03 INF] HTTP Response: 200 | Body: {"success":true,"data":["Move Forward by 10 metres","Turn Right by 90 degrees","Turn Left by 90 degrees","Move Backward by 6 metres"],"error":null}
+[16:34:03 INF] HTTP POST /api/commands/parse responded 200 in 13.6539 ms
+[16:34:19 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[16:34:19 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[16:34:19 INF] HTTP GET /api/forklifts/all responded 200 in 55.7138 ms
+[16:34:19 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[16:34:19 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[16:34:19 INF] HTTP GET /api/forklifts/all responded 200 in 29.3619 ms
+[16:34:28 INF] HTTP Request: POST /api/commands/track | Body: {"command":"F10R90F5L90B2L90","forkliftId":5}
+[16:34:28 INF] HTTP Response: 200 | Body: {"success":true,"data":{"actions":["Move Forward by 10 metres","Turn Right by 90 degrees","Move Forward by 5 metres","Turn Left by 90 degrees","Move Backward by 2 metres","Turn Left by 90 degrees"],"finalX":5,"finalY":8,"finalOrientation":"West"},"error":null}
+[16:34:28 INF] HTTP POST /api/commands/track responded 200 in 19.9281 ms
+[17:01:34 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[17:01:34 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[17:01:34 INF] HTTP GET /api/forklifts/all responded 200 in 72.6705 ms
+[17:01:34 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[17:01:34 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[17:01:34 INF] HTTP GET /api/forklifts/all responded 200 in 26.5446 ms
+[17:01:45 INF] HTTP Request: GET /api/forklifts | Body: 
+[17:01:45 INF] HTTP Response: 200 | Body: {"success":true,"data":{"items":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"totalCount":5,"page":1,"pageSize":5,"totalPages":1},"error":null}
+[17:01:45 INF] HTTP GET /api/forklifts responded 200 in 44.9508 ms
+[17:01:45 INF] HTTP Request: GET /api/forklifts | Body: 
+[17:01:45 INF] HTTP Response: 200 | Body: {"success":true,"data":{"items":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"totalCount":5,"page":1,"pageSize":5,"totalPages":1},"error":null}
+[17:01:45 INF] HTTP GET /api/forklifts responded 200 in 23.1145 ms
+[17:01:47 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[17:01:48 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[17:01:48 INF] HTTP GET /api/forklifts/all responded 200 in 26.6738 ms
+[17:01:48 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[17:01:48 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[17:01:48 INF] HTTP GET /api/forklifts/all responded 200 in 24.3308 ms
+[17:01:49 INF] HTTP Request: GET /api/forklifts | Body: 
+[17:01:49 INF] HTTP Response: 200 | Body: {"success":true,"data":{"items":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"totalCount":5,"page":1,"pageSize":5,"totalPages":1},"error":null}
+[17:01:49 INF] HTTP GET /api/forklifts responded 200 in 32.5849 ms
+[17:01:49 INF] HTTP Request: GET /api/forklifts | Body: 
+[17:01:49 INF] HTTP Response: 200 | Body: {"success":true,"data":{"items":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"totalCount":5,"page":1,"pageSize":5,"totalPages":1},"error":null}
+[17:01:49 INF] HTTP GET /api/forklifts responded 200 in 24.6860 ms
+[17:01:52 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[17:01:52 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[17:01:52 INF] HTTP GET /api/forklifts/all responded 200 in 29.1056 ms
+[17:01:52 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[17:01:52 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[17:01:52 INF] HTTP GET /api/forklifts/all responded 200 in 27.7564 ms
+[17:01:54 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[17:01:54 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[17:01:54 INF] HTTP GET /api/forklifts/all responded 200 in 41.9716 ms
+[17:01:54 INF] HTTP Request: GET /api/forklifts/all | Body: 
+[17:01:54 INF] HTTP Response: 200 | Body: {"success":true,"data":[{"id":1,"name":"Titan Lifter","modelNumber":"XA123","manufacturingDate":"2015-05-12T00:00:00","age":10},{"id":2,"name":"Zephyr Mover","modelNumber":"YB456","manufacturingDate":"2018-07-23T00:00:00","age":6},{"id":3,"name":"Atlas Hauler","modelNumber":"ZC789","manufacturingDate":"2012-10-10T00:00:00","age":12},{"id":4,"name":"Cyclone Loader","modelNumber":"WD321","manufacturingDate":"2020-01-15T00:00:00","age":5},{"id":5,"name":"Phoenix Shifter","modelNumber":"VE654","manufacturingDate":"2017-03-30T00:00:00","age":8}],"error":null}
+[17:01:54 INF] HTTP GET /api/forklifts/all responded 200 in 22.7225 ms
+[22:38:02 INF] HTTP Request: POST /api/Commands/track | Body: {
+  "command": "string"
+}
+[22:38:02 INF] HTTP Response: 400 | Body: {"success":false,"data":null,"error":{"message":"Invalid number after 's'"}}
+[22:38:02 INF] HTTP POST /api/Commands/track responded 400 in 194.8961 ms
+[22:38:33 INF] HTTP Request: POST /api/Commands/track | Body: {
+  "command": "F10L80"
+}
+[22:38:33 INF] HTTP Response: 400 | Body: {"success":false,"data":null,"error":{"message":"Invalid degree value after 'L': must be a multiple of 90"}}
+[22:38:33 INF] HTTP POST /api/Commands/track responded 400 in 51.6302 ms
+[22:38:50 INF] HTTP Request: POST /api/Commands/parse | Body: {
+  "command": "string"
+}
+[22:38:50 INF] HTTP Response: 400 | Body: {"success":false,"data":null,"error":{"message":"Invalid number after 's'"}}
+[22:38:50 INF] HTTP POST /api/Commands/parse responded 400 in 38.0764 ms
+[22:39:00 INF] HTTP Request: POST /api/Commands/trackwithobstacles | Body: {
+  "command": "string",
+  "obstacles": [
+    {
+      "x": 0,
+      "y": 0
+    }
+  ]
+}
+[22:39:00 INF] HTTP Response: 400 | Body: {"success":false,"data":null,"error":{"message":"Invalid number after 's'"}}
+[22:39:00 INF] HTTP POST /api/Commands/trackwithobstacles responded 400 in 45.2090 ms
+[22:39:14 INF] HTTP Request: POST /api/Commands/trackwithobstacles | Body: {
+  "command": "F10L90",
+  "obstacles": [
+    {
+      "x": 0,
+      "y": 0
+    }
+  ]
+}
+[22:39:14 INF] HTTP Response: 200 | Body: {"success":true,"data":{"actions":["Move Forward by 10 metres","Turn Left by 90 degrees"],"finalX":0,"finalY":10,"finalOrientation":"West"},"error":null}
+[22:39:14 INF] HTTP POST /api/Commands/trackwithobstacles responded 200 in 28.1445 ms
+[22:39:35 INF] HTTP Request: POST /api/Commands/trackwithobstacles | Body: {
+  "command": "F10L90",
+  "obstacles": [
+    {
+      "x": 0,
+      "y": 5
+    }
+  ]
+}
+[22:39:35 INF] HTTP Response: 200 | Body: {"success":true,"data":{"actions":["Move Forward by 10 metres","Obstacle encountered at (0, 5). Movement stopped."],"finalX":0,"finalY":4,"finalOrientation":"North"},"error":null}
+[22:39:35 INF] HTTP POST /api/Commands/trackwithobstacles responded 200 in 22.6668 ms
