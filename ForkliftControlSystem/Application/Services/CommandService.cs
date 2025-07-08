@@ -4,7 +4,7 @@ using ForkliftControlSystem.Domain.Enums;
 using ForkliftControlSystem.Domain.Exceptions;
 using ForkliftControlSystem.Domain.Utilities;
 
-namespace ForkliftControlSystem.Infrastructure.Services;
+namespace ForkliftControlSystem.Application.Services;
 
 internal class CommandService : ICommandService
 {
@@ -103,7 +103,7 @@ internal class CommandService : ICommandService
             {
                 case 'F':
                 case 'B':
-                    int moveAmount = (step.Command == 'F') ? step.Value : -step.Value;
+                    int moveAmount = step.Command == 'F' ? step.Value : -step.Value;
                     for (int i = 0; i < Math.Abs(moveAmount); i++)
                     {
                         int nextX = x, nextY = y;

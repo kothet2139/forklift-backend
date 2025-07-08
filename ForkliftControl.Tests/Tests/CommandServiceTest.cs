@@ -1,7 +1,7 @@
 ﻿using FluentAssertions;
 using ForkliftControlSystem.Application.DTOs;
 using ForkliftControlSystem.Application.Interfaces;
-using ForkliftControlSystem.Infrastructure.Services;
+using ForkliftControlSystem.Application.Services;
 
 namespace ForkliftControl.Tests.Tests
 {

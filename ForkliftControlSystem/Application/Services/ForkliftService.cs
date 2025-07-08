@@ -5,7 +5,7 @@ using ForkliftControlSystem.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
 
-namespace ForkliftControlSystem.Infrastructure.Services
+namespace ForkliftControlSystem.Application.Services
 {
     public class ForkliftService : IForkliftService
     {

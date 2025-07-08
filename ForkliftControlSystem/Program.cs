@@ -2,9 +2,9 @@ using ForkliftControlSystem.Api.Middleware;
 using ForkliftControlSystem.Application.Interfaces;
 using ForkliftControlSystem.Application.Interfaces.Repositories;
 using ForkliftControlSystem.Application.Interfaces.Services;
+using ForkliftControlSystem.Application.Services;
 using ForkliftControlSystem.Infrastructure.Persistence;
 using ForkliftControlSystem.Infrastructure.Repositories;
-using ForkliftControlSystem.Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 
