@@ -5,6 +5,7 @@ using ForkliftControlSystem.Application.Interfaces.Services;
 using ForkliftControlSystem.Application.Services;
 using ForkliftControlSystem.Infrastructure.Persistence;
 using ForkliftControlSystem.Infrastructure.Repositories;
+using ForkliftControlSystem.Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 
@@ -26,6 +27,7 @@ namespace ForkliftControlSystem
             // Add services to the container.
             builder.Services.AddDbContext<ForkliftDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+            builder.Services.AddScoped<IForkliftDataLoader, FileForkliftDataLoader>();
             builder.Services.AddScoped<IForkliftRepository, ForkliftRepository>();
             builder.Services.AddScoped<IForkliftService, ForkliftService>();
             builder.Services.AddScoped<ICommandService, CommandService>();

@@ -1,4 +1,5 @@
 ﻿using ForkliftControlSystem.Application.DTOs;
+using ForkliftControlSystem.Application.Interfaces;
 using ForkliftControlSystem.Application.Interfaces.Repositories;
 using ForkliftControlSystem.Application.Interfaces.Services;
 using ForkliftControlSystem.Domain.Entities;
@@ -10,24 +11,21 @@ namespace ForkliftControlSystem.Application.Services
     public class ForkliftService : IForkliftService
     {
         private readonly IForkliftRepository _forkliftRepository;
+        private readonly IForkliftDataLoader _forkliftDataLoader;
         private readonly IHostEnvironment _env;
 
-        public ForkliftService(IForkliftRepository forkliftRepository, IHostEnvironment env)
+        public ForkliftService(IForkliftRepository forkliftRepository, IHostEnvironment env
+            , IForkliftDataLoader forkliftDataLoader)
         {
             _forkliftRepository = forkliftRepository;
+            _forkliftDataLoader = forkliftDataLoader;
             _env = env;
         }
         public async Task<IEnumerable<ForkliftDto>> GetAllForklifts()
         {
-            var path = Path.Combine(_env.ContentRootPath, "Infrastructure\\Data", "fleet.json");
-            var json = await File.ReadAllTextAsync(path);
+            var forklifts = await _forkliftDataLoader.LoadForkliftDataAsync();
 
-            var forklifts = JsonSerializer.Deserialize<List<Forklift>>(json, new JsonSerializerOptions
-            {
-                PropertyNameCaseInsensitive = true
-            });
-
-            if(forklifts == null)
+            if (forklifts == null)
             {
                 return Enumerable.Empty<ForkliftDto>();
             }
@@ -49,13 +47,7 @@ namespace ForkliftControlSystem.Application.Services
         }
         public async Task<PagedResult<ForkliftDto>> GetPaginatedForklifts(int page, int pageSize)
         {
-            var path = Path.Combine(_env.ContentRootPath, "Infrastructure\\Data", "fleet.json");
-            var json = await File.ReadAllTextAsync(path);
-
-            var forklifts = JsonSerializer.Deserialize<List<Forklift>>(json, new JsonSerializerOptions
-            {
-                PropertyNameCaseInsensitive = true
-            });
+            var forklifts = await _forkliftDataLoader.LoadForkliftDataAsync();
 
             if (forklifts == null)
             {
@@ -119,16 +111,7 @@ namespace ForkliftControlSystem.Application.Services
             if (await _forkliftRepository.AnyAsync())
                 return; // Already seeded
 
-            var path = Path.Combine(_env.ContentRootPath, "Infrastructure\\Data", "fleet.json");
-
-            if (!File.Exists(path))
-                return;
-
-            var json = await File.ReadAllTextAsync(path);
-            var forklifts = JsonSerializer.Deserialize<List<Forklift>>(json, new JsonSerializerOptions
-            {
-                PropertyNameCaseInsensitive = true
-            });
+            var forklifts = await _forkliftDataLoader.LoadForkliftDataAsync();
 
             if (forklifts?.Count > 0)
             {
